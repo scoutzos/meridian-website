@@ -83,7 +83,46 @@ export default function Home() {
         <div className="mt-20 w-px h-12 bg-brass/30 mx-auto" aria-hidden="true" />
       </section>
 
-      {/* ── 2. Submit a Deal (light) ── */}
+      {/* ── 2. Our Markets (dark) ── */}
+      <section
+        id="our-markets"
+        className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
+      >
+        <div className="max-w-5xl mx-auto">
+          <SectionLabel>Where We Buy</SectionLabel>
+          <h2 className="font-serif font-light text-bone text-3xl md:text-4xl mb-4">
+            Our Markets
+          </h2>
+          <p className="font-sans font-light text-fog text-base mb-16 max-w-xl leading-relaxed">
+            We&apos;re actively evaluating opportunities across the Atlanta metro.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+            {[
+              { market: "Marietta", sub: "Cobb County" },
+              { market: "Gwinnett", sub: "Gwinnett County" },
+              { market: "Cobb", sub: "Cobb County" },
+              { market: "Roswell", sub: "Fulton County" },
+              { market: "Buckhead", sub: "Atlanta Metro" },
+              { market: "Sandy Springs", sub: "Fulton County" },
+              { market: "Dunwoody", sub: "DeKalb County" },
+              { market: "Doraville", sub: "DeKalb County" },
+              { market: "Fayetteville", sub: "Fayette County" },
+            ].map(({ market, sub }) => (
+              <div key={market} className="bg-obsidian p-8 md:p-10">
+                <h3 className="font-serif font-light text-brass text-xl mb-1">
+                  {market}
+                </h3>
+                <p className="font-sans font-light text-fog/60 text-xs tracking-wide">
+                  {sub}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. Submit a Deal (light) ── */}
       <section
         id="submit-a-deal"
         className="bg-bone py-24 md:py-32 px-6 scroll-mt-16"
@@ -99,67 +138,6 @@ export default function Home() {
             our acquisitions team will review it within 72 hours.
           </p>
           <DealForm />
-        </div>
-      </section>
-
-      {/* ── 3. Our Markets (dark) ── */}
-      <section
-        id="our-markets"
-        className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
-      >
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel>Where We Buy</SectionLabel>
-          <h2 className="font-serif font-light text-bone text-3xl md:text-4xl mb-4">
-            Our Markets
-          </h2>
-          <p className="font-sans font-light text-fog text-base mb-16 max-w-xl leading-relaxed">
-            We&apos;re actively evaluating opportunities across the Atlanta metro.
-            Here&apos;s where we focus — and what we look for in each area.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
-            {[
-              {
-                market: "South Fulton",
-                detail:
-                  "Established residential corridors with strong fundamentals. We focus on vacant lots and teardown candidates where new construction supports solid resale values.",
-              },
-              {
-                market: "East Point",
-                detail:
-                  "Transit-accessible neighborhoods with growing demand. Proximity to MARTA makes East Point attractive for buyers who want connectivity without downtown pricing.",
-              },
-              {
-                market: "Fairburn",
-                detail:
-                  "Suburban land with room to build. Fairburn's growth trajectory and relative affordability make it a natural fit for value-focused new construction.",
-              },
-              {
-                market: "Snellville & Gwinnett",
-                detail:
-                  "Family-oriented markets with consistent demand for quality new builds. We focus on infill and teardown opportunities in established neighborhoods.",
-              },
-              {
-                market: "Broader Atlanta Metro",
-                detail:
-                  "We evaluate opportunities across all 15 counties of the metro. If you have land anywhere in the greater Atlanta region, we want to hear from you.",
-              },
-              {
-                market: "Tell Us What You Have",
-                detail:
-                  "Our criteria center on site viability, acquisition cost, and resale market. If you have something that doesn't fit neatly, submit it anyway — we look at everything.",
-              },
-            ].map(({ market, detail }) => (
-              <div key={market} className="bg-obsidian p-8 md:p-10">
-                <h3 className="font-serif font-light text-brass text-xl mb-3">
-                  {market}
-                </h3>
-                <p className="font-sans font-light text-fog text-sm leading-relaxed">
-                  {detail}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
