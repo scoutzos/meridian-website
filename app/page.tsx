@@ -1,33 +1,37 @@
 import DealForm from "./components/DealForm";
 import ContactForm from "./components/ContactForm";
 
-function LogoMark({ size = "sm" }: { size?: "sm" | "lg" }) {
-  if (size === "lg") {
-    return (
-      <div className="flex flex-col items-center">
-        <span className="font-serif font-light text-brass leading-none text-[7rem] md:text-[10rem]">
-          M°
-        </span>
-        <div className="flex items-center gap-3 mt-2">
-          <span className="text-brass text-base md:text-xl leading-none">——</span>
-          <span className="font-serif font-light tracking-[0.28em] text-bone text-xs md:text-sm">
-            MERIDIAN COLLECTIVE
-          </span>
-          <span className="text-brass text-base md:text-xl leading-none">——</span>
-        </div>
-      </div>
-    );
-  }
-
+function NavLogo() {
   return (
-    <div className="flex flex-col items-start leading-none">
-      <span className="font-serif font-light text-brass text-2xl leading-none">M°</span>
-      <div className="flex items-center gap-1.5 mt-0.5">
-        <span className="text-brass text-[0.55rem]">——</span>
-        <span className="font-serif font-light tracking-[0.2em] text-bone text-[0.55rem]">
+    <div className="flex items-center gap-3">
+      <span className="font-serif text-brass text-[2.4rem] font-normal leading-none">
+        M<span className="align-super text-[0.38em] leading-none">°</span>
+      </span>
+      <div className="flex flex-col justify-center">
+        <p className="font-serif text-bone text-[0.95rem] leading-snug">
+          <span className="font-normal">Meridian</span>{" "}
+          <span className="italic">Collective</span>
+        </p>
+        <p className="font-sans text-fog text-[0.6rem] font-light leading-tight tracking-wide">
+          A six-operator partnership · Atlanta real estate
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function HeroLogo() {
+  return (
+    <div className="flex flex-col items-center">
+      <span className="font-serif text-brass font-normal leading-none text-[7rem] md:text-[10rem]">
+        M<span className="align-super text-[0.32em] leading-none">°</span>
+      </span>
+      <div className="flex items-center gap-3 mt-2">
+        <span className="text-brass text-base md:text-xl leading-none">——</span>
+        <span className="font-serif font-light tracking-[0.28em] text-bone text-xs md:text-sm">
           MERIDIAN COLLECTIVE
         </span>
-        <span className="text-brass text-[0.55rem]">——</span>
+        <span className="text-brass text-base md:text-xl leading-none">——</span>
       </div>
     </div>
   );
@@ -48,7 +52,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-obsidian border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#" aria-label="Meridian Collective home">
-            <LogoMark size="sm" />
+            <NavLogo />
           </a>
           <a
             href="#submit-a-deal"
@@ -61,7 +65,7 @@ export default function Home() {
 
       {/* ── 1. Hero (dark) ── */}
       <section className="min-h-screen bg-obsidian flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
-        <LogoMark size="lg" />
+        <HeroLogo />
 
         <h1 className="font-serif font-light text-bone text-3xl md:text-5xl lg:text-6xl mt-14 max-w-2xl leading-tight">
           We buy land and build in Atlanta metro.
@@ -300,7 +304,7 @@ export default function Home() {
       {/* ── 8. Footer (dark) ── */}
       <footer className="bg-obsidian border-t border-white/5 py-10 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <LogoMark size="sm" />
+          <NavLogo />
           <div className="text-center md:text-right">
             <p className="font-sans text-xs text-fog">
               © {new Date().getFullYear()} Meridian Collective · Atlanta, GA
