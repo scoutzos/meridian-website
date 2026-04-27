@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-obsidian: #0C0F0D;
-  --color-brass: #B08954;
-  --color-bone: #F4EFE6;
-  --color-fog: #D6D1C4;
+  --color-obsidian: #14110D;
+  --color-brass: #C9A878;
+  --color-bone: #EDE6D6;
+  --color-fog: #D6CDB7;
   --color-ink: #1A1A1A;
 
-  --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
 }
 
 html {

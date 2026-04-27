@@ -4,7 +4,7 @@ import Logo from "./components/Logo";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-sans text-xs tracking-widest uppercase text-brass mb-4">
+    <p className="font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-brass mb-4">
       {children}
     </p>
   );
@@ -21,7 +21,7 @@ export default function Home() {
           </a>
           <a
             href="#submit-a-deal"
-            className="hidden md:inline-block font-sans text-xs tracking-widest uppercase text-brass border border-brass/60 px-5 py-2.5 hover:bg-brass hover:text-obsidian transition-colors"
+            className="hidden md:inline-block font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-brass border border-brass/60 px-5 py-2.5 hover:bg-brass hover:text-obsidian transition-colors"
           >
             Submit a Deal
           </a>
@@ -32,11 +32,11 @@ export default function Home() {
       <section className="min-h-screen bg-obsidian flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
         <Logo className="h-52 md:h-72 w-auto" />
 
-        <h1 className="font-serif font-light text-bone text-3xl md:text-5xl lg:text-6xl mt-14 max-w-2xl leading-tight">
+        <h1 className="font-serif font-light text-bone text-5xl md:text-6xl mt-14 max-w-2xl leading-none tracking-[-0.025em]">
           We buy land and build in Atlanta metro.
         </h1>
 
-        <p className="font-sans font-light text-fog text-base md:text-lg mt-6 max-w-xl leading-relaxed">
+        <p className="font-sans text-fog text-base md:text-lg mt-6 max-w-xl leading-[1.6]">
           Meridian Collective acquires vacant land and teardown opportunities
           across the Atlanta metro area. Submit a property directly to our
           acquisition team.
@@ -44,7 +44,7 @@ export default function Home() {
 
         <a
           href="#submit-a-deal"
-          className="mt-10 inline-block bg-brass text-obsidian font-sans font-medium text-xs tracking-widest uppercase px-10 py-4 hover:bg-bone transition-colors"
+          className="mt-10 inline-block bg-brass text-obsidian font-sans font-medium text-[11px] tracking-[0.22em] uppercase px-10 py-4 hover:bg-bone transition-colors"
         >
           Submit a Deal
         </a>
@@ -59,10 +59,10 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto">
           <SectionLabel>Where We Buy</SectionLabel>
-          <h2 className="font-serif font-light text-bone text-3xl md:text-4xl mb-4">
+          <h2 className="font-serif font-light text-bone text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
             Our Markets
           </h2>
-          <p className="font-sans font-light text-fog text-base mb-16 max-w-xl leading-relaxed">
+          <p className="font-sans text-fog text-base mb-16 max-w-xl leading-[1.6]">
             We&apos;re actively evaluating opportunities across the Atlanta metro.
           </p>
 
@@ -79,10 +79,10 @@ export default function Home() {
               { market: "Fayetteville", sub: "Fayette County" },
             ].map(({ market, sub }) => (
               <div key={market} className="bg-obsidian p-8 md:p-10">
-                <h3 className="font-serif font-light text-brass text-xl mb-1">
+                <h3 className="font-sans font-medium text-brass text-[18px] leading-[1.3] mb-1">
                   {market}
                 </h3>
-                <p className="font-sans font-light text-fog/60 text-xs tracking-wide">
+                <p className="font-sans text-fog/60 text-[11px] tracking-[0.22em] uppercase">
                   {sub}
                 </p>
               </div>
@@ -98,13 +98,13 @@ export default function Home() {
       >
         <div className="max-w-3xl mx-auto">
           <SectionLabel>Submit a Deal</SectionLabel>
-          <h2 className="font-serif font-light text-obsidian text-3xl md:text-4xl mb-4">
+          <h2 className="font-serif font-light text-obsidian text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
             Bring us your land.
           </h2>
-          <p className="font-sans font-light text-ink/70 text-base mb-12 max-w-xl leading-relaxed">
-            We&apos;re a developer group looking for vacant land and teardown
-            opportunities across the Atlanta metro. Fill out the form below and
-            our acquisitions team will review it within 72 hours.
+          <p className="font-sans text-ink/70 text-base mb-12 max-w-xl leading-[1.6]">
+            If your situation asks for a fair close with no repairs and no
+            showings, we can usually return an offer in 72 hours. If it
+            doesn&apos;t — we&apos;ll tell you.
           </p>
           <DealForm />
         </div>
@@ -117,11 +117,11 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto">
           <SectionLabel>How It Works</SectionLabel>
-          <h2 className="font-serif font-light text-obsidian text-3xl md:text-4xl mb-4">
+          <h2 className="font-serif font-light text-obsidian text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
             Our Process
           </h2>
-          <p className="font-sans font-light text-ink/70 text-base mb-16 max-w-xl leading-relaxed">
-            We keep it straightforward. No brokers required, no lengthy back-and-forth.
+          <p className="font-sans text-ink/70 text-base mb-16 max-w-xl leading-[1.6]">
+            No brokers required. No lengthy back-and-forth.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-px bg-fog/30">
@@ -151,10 +151,10 @@ export default function Home() {
                 <p className="font-serif text-brass text-4xl font-light mb-6 leading-none">
                   {step}
                 </p>
-                <h3 className="font-serif font-light text-obsidian text-xl mb-3">
+                <h3 className="font-sans font-medium text-obsidian text-[18px] leading-[1.3] mb-3">
                   {title}
                 </h3>
-                <p className="font-sans font-light text-ink/60 text-sm leading-relaxed">
+                <p className="font-sans text-ink/60 text-base leading-[1.6]">
                   {body}
                 </p>
               </div>
@@ -170,10 +170,10 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto">
           <SectionLabel>Portfolio</SectionLabel>
-          <h2 className="font-serif font-light text-bone text-3xl md:text-4xl mb-4">
+          <h2 className="font-serif font-light text-bone text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
             Projects
           </h2>
-          <p className="font-sans font-light text-fog text-base mb-16 max-w-xl leading-relaxed">
+          <p className="font-sans text-fog text-base mb-16 max-w-xl leading-[1.6]">
             Completed projects will be showcased here as they deliver.
           </p>
 
@@ -186,7 +186,7 @@ export default function Home() {
                 <span className="font-serif text-brass/30 text-4xl mb-4 leading-none">
                   M°
                 </span>
-                <p className="font-sans text-fog/50 text-xs tracking-widest uppercase">
+                <p className="font-sans text-fog/50 text-[11px] tracking-[0.22em] uppercase font-medium">
                   Coming Soon
                 </p>
               </div>
@@ -202,27 +202,28 @@ export default function Home() {
       >
         <div className="max-w-3xl mx-auto">
           <SectionLabel>About</SectionLabel>
-          <h2 className="font-serif font-light text-obsidian text-3xl md:text-4xl mb-10">
+          <h2 className="font-serif font-light text-obsidian text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-10">
             A six-operator partnership.<br />Atlanta real estate.
           </h2>
 
-          <div className="space-y-6 font-sans font-light text-ink/70 text-base leading-relaxed">
+          <div className="space-y-6 font-sans text-ink/70 text-base leading-[1.6]">
             <p>
               Meridian Collective is a close-knit partnership of six principals
               focused on land acquisition and residential development in the
               Atlanta metro. We pool capital, expertise, and deal flow — each
-              member of the group brings a distinct discipline: acquisitions,
-              construction management, finance, design, legal, and operations.
+              member brings a distinct discipline: acquisitions, construction
+              management, finance, design, legal, and operations.
             </p>
             <p>
-              We&apos;re not a fund. We&apos;re not a brokerage. We find land, plan
-              projects, and build homes. Our structure lets us move decisively
-              at the acquisition stage and manage projects with direct
-              accountability at every step.
+              We run a thesis, not a pipeline. One underwriting standard, a
+              bias toward holding well-located assets through the cycle, and no
+              tolerance for deals that don&apos;t pencil.
             </p>
             <p>
-              We&apos;re based in Atlanta. We build in Atlanta. And we&apos;re actively
-              looking for more land to work with.
+              We&apos;re not a fund. We&apos;re not a brokerage. We find land,
+              plan projects, and build homes. Our structure lets us move
+              decisively at the acquisition stage and manage projects with
+              direct accountability at every step.
             </p>
           </div>
 
@@ -233,10 +234,10 @@ export default function Home() {
               { label: "Market", value: "Atlanta metro" },
             ].map(({ label, value }) => (
               <div key={label}>
-                <p className="font-sans text-xs tracking-widest uppercase text-brass mb-2">
+                <p className="font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-brass mb-2">
                   {label}
                 </p>
-                <p className="font-sans font-light text-obsidian text-sm">
+                <p className="font-sans text-obsidian text-sm leading-[1.6]">
                   {value}
                 </p>
               </div>
@@ -252,10 +253,10 @@ export default function Home() {
       >
         <div className="max-w-3xl mx-auto">
           <SectionLabel>Get in Touch</SectionLabel>
-          <h2 className="font-serif font-light text-bone text-3xl md:text-4xl mb-4">
+          <h2 className="font-serif font-light text-bone text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
             Contact
           </h2>
-          <p className="font-sans font-light text-fog text-base mb-2 max-w-md leading-relaxed">
+          <p className="font-sans text-fog text-base mb-2 max-w-md leading-[1.6]">
             Have a question that isn&apos;t about a specific property? Reach out
             directly.
           </p>
