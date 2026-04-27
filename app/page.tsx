@@ -19,12 +19,22 @@ export default function Home() {
           <a href="#" aria-label="Meridian Collective home">
             <Image src="/logo.jpeg" alt="Meridian Collective" height={48} width={48} className="object-contain" priority />
           </a>
-          <a
-            href="#submit-a-deal"
-            className="hidden md:inline-block font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-brass border border-brass/60 px-5 py-2.5 hover:bg-brass hover:text-obsidian transition-colors"
-          >
-            Submit a Deal
-          </a>
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="https://meridian-survey-two.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-fog/70 hover:text-bone transition-colors"
+            >
+              Member Login
+            </a>
+            <a
+              href="#submit-a-deal"
+              className="font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-brass border border-brass/60 px-5 py-2.5 hover:bg-brass hover:text-obsidian transition-colors"
+            >
+              Submit a Deal
+            </a>
+          </div>
         </div>
       </nav>
 
