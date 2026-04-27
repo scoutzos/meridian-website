@@ -261,7 +261,7 @@ export default function Home() {
             directly.
           </p>
           <p className="font-sans text-sm text-brass mb-12">
-            hello@meridiancollective.com
+            info@meridiancollectivegroup.com
           </p>
           <ContactForm />
         </div>
