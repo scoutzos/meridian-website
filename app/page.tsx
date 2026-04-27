@@ -1,6 +1,6 @@
+import Image from "next/image";
 import DealForm from "./components/DealForm";
 import ContactForm from "./components/ContactForm";
-import Logo from "./components/Logo";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-obsidian border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#" aria-label="Meridian Collective home">
-            <Logo className="h-12 w-auto" />
+            <Image src="/logo.jpeg" alt="Meridian Collective" height={48} width={48} className="object-contain" priority />
           </a>
           <a
             href="#submit-a-deal"
@@ -30,7 +30,7 @@ export default function Home() {
 
       {/* ── 1. Hero (dark) ── */}
       <section className="min-h-screen bg-obsidian flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
-        <Logo className="h-52 md:h-72 w-auto" />
+        <Image src="/logo.jpeg" alt="Meridian Collective" height={300} width={300} className="object-contain" priority />
 
         <h1 className="font-serif font-light text-bone text-5xl md:text-6xl mt-14 max-w-2xl leading-none tracking-[-0.025em]">
           We buy land and build in Atlanta metro.
@@ -270,7 +270,7 @@ export default function Home() {
       {/* ── 8. Footer (dark) ── */}
       <footer className="bg-obsidian border-t border-white/5 py-10 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <Logo className="h-10 w-auto" />
+          <Image src="/logo.jpeg" alt="Meridian Collective" height={40} width={40} className="object-contain" />
           <div className="text-center md:text-right">
             <p className="font-sans text-xs text-fog">
               © {new Date().getFullYear()} Meridian Collective · Atlanta, GA
