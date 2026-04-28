@@ -39,8 +39,8 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* ── 1. Hero (dark) ── */}
-      <section className="min-h-screen bg-obsidian flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
+      {/* ── 1. Hero (obsidian to brass gradient) ── */}
+      <section className="min-h-screen bg-gradient-to-b from-obsidian via-obsidian to-brass/10 flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
         <Logo width={300} />
 
         <h1 className="font-serif font-light text-bone text-5xl md:text-6xl mt-14 max-w-2xl leading-none tracking-[-0.025em]">
@@ -63,21 +63,21 @@ export default function Home() {
         <div className="mt-20 w-px h-12 bg-brass/30 mx-auto" aria-hidden="true" />
       </section>
 
-      {/* ── 2. Our Markets (dark) ── */}
+      {/* ── 2. Our Markets (brass to fog gradient) ── */}
       <section
         id="our-markets"
-        className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
+        className="bg-gradient-to-b from-brass/10 via-fog/15 to-fog/25 py-24 md:py-32 px-6 scroll-mt-16"
       >
         <div className="max-w-5xl mx-auto">
           <SectionLabel>Where We Buy</SectionLabel>
-          <h2 className="font-serif font-light text-bone text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
+          <h2 className="font-serif font-light text-obsidian text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
             Our Markets
           </h2>
-          <p className="font-sans text-fog text-base mb-16 max-w-xl leading-[1.6]">
+          <p className="font-sans text-ink/70 text-base mb-16 max-w-xl leading-[1.6]">
             We&apos;re actively evaluating opportunities across the Atlanta metro.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-brass/30">
             {[
               { market: "Marietta", sub: "Cobb County" },
               { market: "Gwinnett", sub: "Gwinnett County" },
@@ -89,11 +89,11 @@ export default function Home() {
               { market: "Doraville", sub: "DeKalb County" },
               { market: "Fayetteville", sub: "Fayette County" },
             ].map(({ market, sub }) => (
-              <div key={market} className="bg-obsidian p-8 md:p-10">
-                <h3 className="font-sans font-medium text-brass text-[18px] leading-[1.3] mb-1">
+              <div key={market} className="bg-bone/90 backdrop-blur-sm border border-brass/20 p-8 md:p-10">
+                <h3 className="font-sans font-medium text-obsidian text-[18px] leading-[1.3] mb-1">
                   {market}
                 </h3>
-                <p className="font-sans text-fog/60 text-[11px] tracking-[0.22em] uppercase">
+                <p className="font-sans text-ink/60 text-[11px] tracking-[0.22em] uppercase">
                   {sub}
                 </p>
               </div>
@@ -102,10 +102,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 3. About (light) ── */}
+      {/* ── 3. About (fog to bone gradient) ── */}
       <section
         id="about"
-        className="bg-bone py-24 md:py-32 px-6 scroll-mt-16"
+        className="bg-gradient-to-b from-fog/25 via-bone/80 to-bone py-24 md:py-32 px-6 scroll-mt-16"
       >
         <div className="max-w-3xl mx-auto">
           <SectionLabel>About</SectionLabel>
@@ -153,10 +153,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. Submit a Deal (dark) ── */}
+      {/* ── 4. Submit a Deal (bone to obsidian gradient) ── */}
       <section
         id="submit-a-deal"
-        className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
+        className="bg-gradient-to-b from-bone via-brass/15 to-obsidian py-24 md:py-32 px-6 scroll-mt-16"
       >
         <div className="max-w-3xl mx-auto">
           <SectionLabel>Submit a Deal</SectionLabel>
@@ -172,10 +172,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. Our Process (light) ── */}
+      {/* ── 5. Our Process (obsidian to bone gradient) ── */}
       <section
         id="our-process"
-        className="bg-bone py-24 md:py-32 px-6 scroll-mt-16"
+        className="bg-gradient-to-b from-obsidian via-fog/20 to-bone py-24 md:py-32 px-6 scroll-mt-16"
       >
         <div className="max-w-5xl mx-auto">
           <SectionLabel>How It Works</SectionLabel>
@@ -225,10 +225,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 6. Contact (dark) ── */}
+      {/* ── 6. Contact (bone to brass to obsidian) ── */}
       <section
         id="contact"
-        className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
+        className="bg-gradient-to-b from-bone via-brass/20 to-obsidian py-24 md:py-32 px-6 scroll-mt-16"
       >
         <div className="max-w-3xl mx-auto">
           <SectionLabel>Get in Touch</SectionLabel>
@@ -246,10 +246,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 7. Projects (light) ── */}
+      {/* ── 7. Projects (obsidian to fog to bone) ── */}
       <section
         id="projects"
-        className="bg-bone py-16 md:py-20 px-6 scroll-mt-16"
+        className="bg-gradient-to-b from-obsidian via-fog/30 to-bone py-16 md:py-20 px-6 scroll-mt-16"
       >
         <div className="max-w-5xl mx-auto text-center">
           <SectionLabel>Portfolio</SectionLabel>
@@ -278,8 +278,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 8. Footer (dark) ── */}
-      <footer className="bg-obsidian border-t border-white/5 py-10 px-6">
+      {/* ── 8. Footer (bone to obsidian) ── */}
+      <footer className="bg-gradient-to-b from-bone to-obsidian border-t border-brass/20 py-10 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <Logo width={40} />
           <div className="text-center md:text-right">
