@@ -102,17 +102,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 3. Submit a Deal (light) ── */}
+      {/* ── 3. About (light) ── */}
       <section
-        id="submit-a-deal"
+        id="about"
         className="bg-bone py-24 md:py-32 px-6 scroll-mt-16"
       >
         <div className="max-w-3xl mx-auto">
+          <SectionLabel>About</SectionLabel>
+          <h2 className="font-serif font-light text-obsidian text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-10">
+            A six-operator partnership.<br />Atlanta real estate.
+          </h2>
+
+          <div className="space-y-6 font-sans text-ink/70 text-base leading-[1.6]">
+            <p>
+              Meridian Collective is a close-knit partnership of six principals
+              focused on land acquisition and residential development in the
+              Atlanta metro. We pool capital, expertise, and deal flow — each
+              member brings a distinct discipline: acquisitions, construction
+              management, finance, design, legal, and operations.
+            </p>
+            <p>
+              We run a thesis, not a pipeline. One underwriting standard, a
+              bias toward holding well-located assets through the cycle, and no
+              tolerance for deals that don&apos;t pencil.
+            </p>
+            <p>
+              We&apos;re not a fund. We&apos;re not a brokerage. We find land,
+              plan projects, and build homes. Our structure lets us move
+              decisively at the acquisition stage and manage projects with
+              direct accountability at every step.
+            </p>
+          </div>
+
+          <div className="mt-12 pt-10 border-t border-fog/40 grid grid-cols-3 gap-6">
+            {[
+              { label: "Structure", value: "Six-operator partnership" },
+              { label: "Focus", value: "Land acquisition & new construction" },
+              { label: "Market", value: "Atlanta metro" },
+            ].map(({ label, value }) => (
+              <div key={label}>
+                <p className="font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-brass mb-2">
+                  {label}
+                </p>
+                <p className="font-sans text-obsidian text-sm leading-[1.6]">
+                  {value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. Submit a Deal (dark) ── */}
+      <section
+        id="submit-a-deal"
+        className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
+      >
+        <div className="max-w-3xl mx-auto">
           <SectionLabel>Submit a Deal</SectionLabel>
-          <h2 className="font-serif font-light text-obsidian text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
+          <h2 className="font-serif font-light text-bone text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
             Bring us your land.
           </h2>
-          <p className="font-sans text-ink/70 text-base mb-12 max-w-xl leading-[1.6]">
+          <p className="font-sans text-fog text-base mb-12 max-w-xl leading-[1.6]">
             If your situation asks for a fair close with no repairs and no
             showings, we can usually return an offer in 72 hours. If it
             doesn&apos;t — we&apos;ll tell you.
@@ -121,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. Our Process (light) ── */}
+      {/* ── 5. Our Process (light) ── */}
       <section
         id="our-process"
         className="bg-bone py-24 md:py-32 px-6 scroll-mt-16"
@@ -174,90 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. Projects (dark) ── */}
-      <section
-        id="projects"
-        className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
-      >
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel>Portfolio</SectionLabel>
-          <h2 className="font-serif font-light text-bone text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-4">
-            Projects
-          </h2>
-          <p className="font-sans text-fog text-base mb-16 max-w-xl leading-[1.6]">
-            Completed projects will be showcased here as they deliver.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="bg-obsidian border border-white/5 aspect-[4/3] flex flex-col items-center justify-center text-center p-8"
-              >
-                <span className="font-serif text-brass/30 text-4xl mb-4 leading-none">
-                  M°
-                </span>
-                <p className="font-sans text-fog/50 text-[11px] tracking-[0.22em] uppercase font-medium">
-                  Coming Soon
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 6. About (light) ── */}
-      <section
-        id="about"
-        className="bg-bone py-24 md:py-32 px-6 scroll-mt-16"
-      >
-        <div className="max-w-3xl mx-auto">
-          <SectionLabel>About</SectionLabel>
-          <h2 className="font-serif font-light text-obsidian text-[32px] md:text-4xl leading-[1.1] tracking-[-0.01em] mb-10">
-            A six-operator partnership.<br />Atlanta real estate.
-          </h2>
-
-          <div className="space-y-6 font-sans text-ink/70 text-base leading-[1.6]">
-            <p>
-              Meridian Collective is a close-knit partnership of six principals
-              focused on land acquisition and residential development in the
-              Atlanta metro. We pool capital, expertise, and deal flow — each
-              member brings a distinct discipline: acquisitions, construction
-              management, finance, design, legal, and operations.
-            </p>
-            <p>
-              We run a thesis, not a pipeline. One underwriting standard, a
-              bias toward holding well-located assets through the cycle, and no
-              tolerance for deals that don&apos;t pencil.
-            </p>
-            <p>
-              We&apos;re not a fund. We&apos;re not a brokerage. We find land,
-              plan projects, and build homes. Our structure lets us move
-              decisively at the acquisition stage and manage projects with
-              direct accountability at every step.
-            </p>
-          </div>
-
-          <div className="mt-12 pt-10 border-t border-fog/40 grid grid-cols-3 gap-6">
-            {[
-              { label: "Structure", value: "Six-operator partnership" },
-              { label: "Focus", value: "Land acquisition & new construction" },
-              { label: "Market", value: "Atlanta metro" },
-            ].map(({ label, value }) => (
-              <div key={label}>
-                <p className="font-sans text-[11px] tracking-[0.22em] uppercase font-medium text-brass mb-2">
-                  {label}
-                </p>
-                <p className="font-sans text-obsidian text-sm leading-[1.6]">
-                  {value}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. Contact (dark) ── */}
+      {/* ── 6. Contact (dark) ── */}
       <section
         id="contact"
         className="bg-obsidian py-24 md:py-32 px-6 scroll-mt-16"
@@ -275,6 +243,38 @@ export default function Home() {
             info@meridiancollectivegroup.com
           </p>
           <ContactForm />
+        </div>
+      </section>
+
+      {/* ── 7. Projects (light) ── */}
+      <section
+        id="projects"
+        className="bg-bone py-16 md:py-20 px-6 scroll-mt-16"
+      >
+        <div className="max-w-5xl mx-auto text-center">
+          <SectionLabel>Portfolio</SectionLabel>
+          <h2 className="font-serif font-light text-obsidian text-[28px] md:text-3xl leading-[1.1] tracking-[-0.01em] mb-4">
+            Projects
+          </h2>
+          <p className="font-sans text-ink/60 text-sm mb-12 max-w-md mx-auto leading-[1.6]">
+            Completed projects will be showcased here as they deliver.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-fog/20">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="bg-bone border border-fog/20 aspect-[4/3] flex flex-col items-center justify-center text-center p-6"
+              >
+                <span className="font-serif text-brass/20 text-3xl mb-3 leading-none">
+                  M°
+                </span>
+                <p className="font-sans text-ink/40 text-[10px] tracking-[0.22em] uppercase font-medium">
+                  Coming Soon
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
